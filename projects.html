@@ -1,0 +1,20 @@
+---
+layout: page
+title: Projects
+---
+
+<div class="projects">
+  {% for repository in site.github.public_repositories %}
+    <div class="project">
+      <h2 class="project-title">
+        <a href="{{ repository.html_url }}">
+          {{ repository.name }}
+        </a>
+      </h2>
+
+      <span class="post-date">{{ repository.language }}</span>
+      
+      {{ repository.description }}
+    </div>
+  {% endfor %}
+</div>
